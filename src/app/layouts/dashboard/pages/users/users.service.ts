@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { IUser } from './models';
+import { CreateUserPayload, IUser } from './models';
 import { catchError, delay, first, Observable, of, throwError } from 'rxjs';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { environment} from '../../../../../environments/environment';
 
 const USERS_DB: IUser[] = [
    {
@@ -70,4 +71,9 @@ export class UsersService {
 
     //return of(USERS_DB.find((el) => el.id === id)).pipe(delay(1500));
   }
+  createUser(payload: CreateUserPayload): Observable<IUser>{
+    return this.httpClient.post<IUser>(`${environment.baseAPIURL}/users`, payload);
+  }
+
 }
+

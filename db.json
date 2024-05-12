@@ -44,6 +44,15 @@
       "sanciones": 5,
       "role": "PROFESOR",
       "createdAt": "2024-05-12T12:00:00.000Z"
+    },
+    {
+      "id": "be0c",
+      "firstName": "Maxi",
+      "lastName": "Api",
+      "email": "api@gmail.com",
+      "sanciones": "66",
+      "role": "USER",
+      "createAt": "2024-05-12T23:38:47.782Z"
     }
   ],
   "sales": [],

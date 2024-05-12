@@ -66,9 +66,15 @@ export class UsersComponent implements OnInit {
               );
             } else {
               // LOGICA DE CREAR EL USUARIO
-              result.id = new Date().getTime().toString().substring(0, 3);
+              //result.id = new Date().getTime().toString().substring(0, 3);
               result.createAt = new Date();
-              this.users = [...this.users, result];
+
+              this.usersService.createUser(result).subscribe({
+                next:(usuarioCreado) => {
+                  this.users=[...this.users, usuarioCreado];
+                }
+              })
+              //this.users = [...this.users, result];
             }
           }
         },
