@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { IUser } from './models';
 import { catchError, delay, first, Observable, of, throwError } from 'rxjs';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 const USERS_DB: IUser[] = [
    {
@@ -66,6 +66,8 @@ export class UsersService {
   }
 
   getUserById(id: number): Observable<IUser | undefined> {
-    return of(USERS_DB.find((el) => el.id === id)).pipe(delay(1500));
+    return this.httpClient.get<IUser>(`http://localhost:3000/users/${id}`); 
+
+    //return of(USERS_DB.find((el) => el.id === id)).pipe(delay(1500));
   }
 }
