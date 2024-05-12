@@ -1,1 +1,23 @@
-¨ 
+{
+  "users": [
+    {
+      "name": "Goku",
+      "id": "de6d"
+    },
+    {
+        "name": "Goku",
+        "id": "ae6d"
+    },
+    {
+        "name": "Goku",
+        "id": "be6d"
+    },
+    {
+        "name": "Goku",
+        "id": "ce6d"
+    }
+
+  ],
+  "sales": [],
+  "roles": []
+}
