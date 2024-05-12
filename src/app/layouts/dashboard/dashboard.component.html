@@ -20,6 +20,9 @@
         <span>Inicio</span>
       </a>
       <a routerLink="users" mat-button class="menu-link">
+        <!--linea para no mostrar contenido del menu 
+        <a *ngif="(authuser$ | async)?.role === 'ADMIN'" routerLink="users" mat-button class="menu-link">
+        -->
         <mat-icon>people</mat-icon>
         <span>Usuarios</span>
       </a>
