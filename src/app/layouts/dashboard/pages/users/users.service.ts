@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { IUser } from './models';
 import { catchError, delay, first, Observable, of, throwError } from 'rxjs';
+import {HttpClient} from '@angular/common/http';
 
 const USERS_DB: IUser[] = [
    {
@@ -52,8 +53,13 @@ const USERS_DB: IUser[] = [
 
 @Injectable({ providedIn: 'root' })
 export class UsersService {
+
+  constructor(private httpClient: HttpClient){
+
+  }
   getUsers(): Observable<IUser[]> {
-    return of(USERS_DB).pipe(delay(1500));
+    return this.httpClient.get<IUser[]>('http://localhost:3000/users')
+    //return of(USERS_DB).pipe(delay(1500));
     // return throwError(() => new Error('Error al cargar los usuarios')).pipe(
     //   catchError((err) => of(err))
     // );

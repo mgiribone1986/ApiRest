@@ -1,22 +1,50 @@
 {
   "users": [
     {
-      "name": "Goku",
-      "id": "de6d"
+      "id": "de6d",
+      "firstName": "Leo",
+      "lastName": "Matioli",
+      "email": "dead999@yahoo.com",
+      "sanciones": 3,
+      "role": "ADMIN",
+      "createdAt": "2024-05-12T12:00:00.000Z"
     },
     {
-        "name": "Goku",
-        "id": "ae6d"
+      "id": "ae6d",
+      "firstName": "Roberto",
+      "lastName": "Carlos",
+      "email": "1000000@friends.com",
+      "sanciones": 3,
+      "role": "USER",
+      "createdAt": "2024-05-12T12:00:00.000Z"
     },
     {
-        "name": "Goku",
-        "id": "be6d"
+      "id": "be6d",
+      "firstName": "Marcos",
+      "lastName": "Sogtulakk",
+      "email": "sanitarios@acidos.com",
+      "sanciones": 4,
+      "role": "USER",
+      "createdAt": "2024-05-12T12:00:00.000Z"
     },
     {
-        "name": "Goku",
-        "id": "ce6d"
+      "id": "ce6d",
+      "firstName": "Mica",
+      "lastName": "Kitah",
+      "email": "micayosoy@instagramer.com",
+      "sanciones": 5,
+      "role": "ESTUDIANTE",
+      "createdAt": "2024-05-12T12:00:00.000Z"
+    },
+    {
+      "id": "fe6d",
+      "firstName": "Dina",
+      "lastName": "Marca",
+      "email": "filosofiayletras@dana.dk",
+      "sanciones": 5,
+      "role": "PROFESOR",
+      "createdAt": "2024-05-12T12:00:00.000Z"
     }
-
   ],
   "sales": [],
   "roles": []
