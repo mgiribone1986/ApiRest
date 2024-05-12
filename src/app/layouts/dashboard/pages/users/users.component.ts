@@ -31,6 +31,7 @@ export class UsersComponent implements OnInit {
     private usersService: UsersService
   ) {}
 
+  
   ngOnInit(): void {
     this.loading = true;
     this.usersService.getUsers().subscribe({

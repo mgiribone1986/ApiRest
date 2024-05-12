@@ -33,15 +33,29 @@ export class AuthService {
       this.router.navigate(['dashboard', 'home']);
     }
   }
-  verifyToken(): boolean {
-    const token = localStorage.getItem('accessToken');
-    if (token) {
+
+  //verifyToken(): boolean {
+    //const token = localStorage.getItem('accessToken');
+    //if (token) {
+     // this._authUser$.next(this.MOCK_AUTH_USER);
+     // return true;
+    //} else {
+    //  return false;
+    //}
+  //}
+
+  verifyToken(): boolean { //Observable<boolean> 
+     const token = localStorage.getItem('accessToken');
+
+     if(token){
       this._authUser$.next(this.MOCK_AUTH_USER);
-      return true;
-    } else {
-      return false;
+      return  true
+     } else {
+      return false
+     }
+    
     }
-  }
+
   logout(): void {
     this._authUser$.next(null);
     localStorage.removeItem('accessToken');

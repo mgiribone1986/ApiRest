@@ -12,6 +12,8 @@ import { FormFieldValidationErrorsPipe } from './pipes/form-field-validation-err
 import { ResaltadoDirective } from './directives/resaltado.directive';
 import { RepetirDirective } from './directives/repetir.directive';
 import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { MatListModule } from '@angular/material/list';
     MatTableModule,
     MatButtonModule,
     MatDialogModule,
+    MatCardModule,
     MatFormFieldModule,
     MatInputModule,
     MatListModule,
